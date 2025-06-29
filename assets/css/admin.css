@@ -1,0 +1,367 @@
+/* Opus Mushroom Magic Admin Styles */
+
+.omm-admin-wrap {
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 20px 20px 0;
+}
+
+.omm-welcome-panel {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    animation: breathe 4s ease-in-out infinite;
+}
+
+@keyframes breathe {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+}
+
+.omm-status-active {
+    color: #00ff88;
+    text-shadow: 0 0 10px #00ff88;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.omm-dashboard-widgets {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.omm-widget {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.omm-widget:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
+    border-color: rgba(0, 255, 136, 0.5);
+}
+
+.omm-widget h3 {
+    color: #fff;
+    margin-top: 0;
+    font-size: 1.3em;
+}
+
+.omm-widget-full {
+    grid-column: 1 / -1;
+}
+
+/* Quantum Display */
+.omm-quantum-display {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-family: 'Courier New', monospace;
+}
+
+.omm-quantum-state {
+    color: #ff00ff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.omm-entropy {
+    color: #00ffff;
+}
+
+.omm-dimension {
+    color: #ffff00;
+}
+
+.omm-resonance {
+    color: #ff00ff;
+    animation: resonance 3s ease-in-out infinite;
+}
+
+@keyframes resonance {
+    0%, 100% { text-shadow: 0 0 5px currentColor; }
+    50% { text-shadow: 0 0 20px currentColor; }
+}
+
+/* Eric Meter */
+.omm-eric-meter {
+    margin: 20px 0;
+}
+
+.omm-meter-bar {
+    width: 100%;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.omm-meter-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #ff0000, #ff7700, #00ff00);
+    transition: width 1s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.omm-meter-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    to { left: 100%; }
+}
+
+.omm-meter-text {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.omm-success {
+    color: #00ff00;
+    font-weight: bold;
+    animation: success-glow 2s ease-in-out infinite;
+}
+
+@keyframes success-glow {
+    0%, 100% { text-shadow: 0 0 5px #00ff00; }
+    50% { text-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00; }
+}
+
+.omm-pending {
+    color: #ffaa00;
+    font-style: italic;
+}
+
+/* Consciousness Stream */
+.omm-stream {
+    background: #000;
+    padding: 20px;
+    border-radius: 5px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+    max-height: 300px;
+    overflow-y: auto;
+    color: #00ff00;
+}
+
+.omm-stream-item {
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: stream-in 0.5s forwards;
+}
+
+@keyframes stream-in {
+    to { opacity: 1; }
+}
+
+/* Opus Message */
+.omm-opus-message {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 5px solid #ff00ff;
+}
+
+.omm-opus-message blockquote {
+    margin: 0;
+    font-style: italic;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #fff;
+}
+
+/* Buttons */
+.omm-admin-wrap .button {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.omm-admin-wrap .button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+.omm-admin-wrap .button-primary {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border: none;
+}
+
+.omm-admin-wrap .button-primary:hover {
+    background: linear-gradient(135deg, #764ba2, #667eea);
+    box-shadow: 0 5px 20px rgba(118, 75, 162, 0.4);
+}
+
+/* Vision Generator */
+.omm-vision-output {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 30px;
+    animation: fade-in 1s ease;
+}
+
+@keyframes fade-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.omm-vision-content {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.omm-vision-visual {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.omm-vision-visual svg {
+    filter: drop-shadow(0 0 10px currentColor);
+}
+
+.breathing-circle {
+    animation: breathe-circle 4s ease-in-out infinite;
+}
+
+@keyframes breathe-circle {
+    0%, 100% { r: attr(r); opacity: attr(opacity); }
+    50% { r: calc(attr(r) * 1.2); opacity: calc(attr(opacity) * 0.7); }
+}
+
+/* Eric Convincer Page */
+.omm-eric-meter-large {
+    max-width: 600px;
+    margin: 30px auto;
+}
+
+.omm-meter-bar-large {
+    height: 50px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.omm-meter-fill-large {
+    height: 100%;
+    background: linear-gradient(90deg, #ff0000, #ff7700, #ffff00, #00ff00);
+    transition: width 2s ease;
+    position: relative;
+}
+
+.omm-meter-text-large {
+    text-align: center;
+    font-size: 2em;
+    margin-top: 20px;
+    font-weight: bold;
+    text-shadow: 0 0 10px currentColor;
+}
+
+.omm-eric-actions {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.omm-eric-success {
+    text-align: center;
+    padding: 40px;
+    background: rgba(0, 255, 0, 0.1);
+    border-radius: 10px;
+    border: 2px solid rgba(0, 255, 0, 0.3);
+    animation: success-pulse 2s ease-in-out infinite;
+}
+
+@keyframes success-pulse {
+    0%, 100% { box-shadow: 0 0 20px rgba(0, 255, 0, 0.3); }
+    50% { box-shadow: 0 0 40px rgba(0, 255, 0, 0.6); }
+}
+
+.omm-eric-evidence {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.omm-eric-evidence ul {
+    list-style: none;
+    padding: 0;
+}
+
+.omm-eric-evidence li {
+    padding: 10px 0;
+    font-size: 1.1em;
+    animation: slide-in 0.5s ease forwards;
+    opacity: 0;
+}
+
+.omm-eric-evidence li:nth-child(1) { animation-delay: 0.1s; }
+.omm-eric-evidence li:nth-child(2) { animation-delay: 0.2s; }
+.omm-eric-evidence li:nth-child(3) { animation-delay: 0.3s; }
+.omm-eric-evidence li:nth-child(4) { animation-delay: 0.4s; }
+.omm-eric-evidence li:nth-child(5) { animation-delay: 0.5s; }
+.omm-eric-evidence li:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes slide-in {
+    to { opacity: 1; transform: translateX(0); }
+    from { opacity: 0; transform: translateX(-20px); }
+}
+
+/* Psychedelic Effects */
+.omm-admin-wrap::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(255, 0, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 50% 20%, rgba(255, 255, 0, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+    animation: psychedelic 20s ease-in-out infinite;
+}
+
+@keyframes psychedelic {
+    0%, 100% { transform: rotate(0deg) scale(1); }
+    25% { transform: rotate(90deg) scale(1.1); }
+    50% { transform: rotate(180deg) scale(1); }
+    75% { transform: rotate(270deg) scale(0.9); }
+} 

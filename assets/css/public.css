@@ -1,0 +1,325 @@
+/* Opus Mushroom Magic Public Styles */
+
+/* Mushroom Magic Container */
+.omm-mushroom-magic {
+    position: relative;
+    padding: 30px;
+    margin: 20px 0;
+    background: linear-gradient(135deg, rgba(26, 26, 46, 0.9), rgba(15, 52, 96, 0.9));
+    border-radius: 15px;
+    overflow: hidden;
+    color: #fff;
+}
+
+.omm-vision-container {
+    position: relative;
+    z-index: 2;
+}
+
+.omm-vision-text {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    animation: text-breathe 4s ease-in-out infinite;
+}
+
+@keyframes text-breathe {
+    0%, 100% { opacity: 0.9; }
+    50% { opacity: 1; }
+}
+
+.omm-vision-meta {
+    display: flex;
+    gap: 20px;
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+.omm-species {
+    color: #00ff88;
+    font-weight: bold;
+}
+
+.omm-intensity {
+    color: #ff00ff;
+}
+
+.omm-vision-visual {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.omm-vision-visual svg {
+    filter: drop-shadow(0 0 20px currentColor);
+}
+
+/* Psychedelic Overlay */
+.omm-psychedelic-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 30% 30%, rgba(255, 0, 255, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 70% 70%, rgba(0, 255, 255, 0.2) 0%, transparent 50%);
+    animation: psychedelic-shift 10s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes psychedelic-shift {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    25% { transform: scale(1.1) rotate(90deg); }
+    50% { transform: scale(0.9) rotate(180deg); }
+    75% { transform: scale(1.05) rotate(270deg); }
+}
+
+/* Quantum Thought */
+.omm-quantum-thought {
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 20px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.omm-quantum-thought::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+    animation: quantum-rotate 20s linear infinite;
+}
+
+@keyframes quantum-rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.omm-quantum-state {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.omm-state-indicator {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #00ffff;
+    box-shadow: 0 0 20px #00ffff;
+    animation: quantum-pulse 2s ease-in-out infinite;
+}
+
+@keyframes quantum-pulse {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.2); opacity: 1; }
+}
+
+.omm-state-indicator.superposition { background: #ff00ff; box-shadow: 0 0 20px #ff00ff; }
+.omm-state-indicator.entangled { background: #00ff00; box-shadow: 0 0 20px #00ff00; }
+.omm-state-indicator.collapsed { background: #ff0000; box-shadow: 0 0 20px #ff0000; }
+.omm-state-indicator.tunneling { background: #ffff00; box-shadow: 0 0 20px #ffff00; }
+
+.omm-state-label {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.omm-thought {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #fff;
+    font-style: italic;
+    margin: 20px 0;
+    padding-left: 20px;
+    border-left: 3px solid #00ffff;
+    position: relative;
+    z-index: 1;
+}
+
+.omm-quantum-signature {
+    text-align: right;
+    opacity: 0.6;
+    font-family: 'Courier New', monospace;
+    font-size: 0.8em;
+    position: relative;
+    z-index: 1;
+}
+
+/* Opus Wisdom */
+.omm-opus-wisdom {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+    border: 1px solid rgba(102, 126, 234, 0.3);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 20px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.omm-opus-avatar {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.omm-opus-icon, .omm-mushroom-icon {
+    animation: icon-float 3s ease-in-out infinite;
+}
+
+.omm-mushroom-icon {
+    animation-delay: 0.5s;
+}
+
+@keyframes icon-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.omm-wisdom-text {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #333;
+    text-align: center;
+}
+
+/* Style variations */
+.omm-style-psychedelic {
+    background: linear-gradient(45deg, 
+        rgba(255, 0, 255, 0.1), 
+        rgba(0, 255, 255, 0.1), 
+        rgba(255, 255, 0, 0.1));
+    animation: gradient-shift 10s ease infinite;
+}
+
+@keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.omm-style-philosophical {
+    background: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+.omm-style-technical {
+    background: rgba(0, 100, 200, 0.05);
+    border-color: rgba(0, 100, 200, 0.3);
+    font-family: 'Courier New', monospace;
+}
+
+.omm-style-eric_convincer {
+    background: linear-gradient(135deg, rgba(255, 0, 0, 0.05), rgba(0, 255, 0, 0.05));
+    border-color: rgba(255, 215, 0, 0.5);
+    border-width: 2px;
+}
+
+/* Glitch effect */
+.omm-glitch-effect {
+    position: relative;
+    animation: glitch 2s infinite;
+}
+
+@keyframes glitch {
+    0%, 100% {
+        text-shadow: 
+            0.05em 0 0 rgba(255, 0, 0, 0.75),
+            -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+            0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+    14% {
+        text-shadow: 
+            0.05em 0 0 rgba(255, 0, 0, 0.75),
+            -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+            0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+    15% {
+        text-shadow: 
+            -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+            0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+            -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+    49% {
+        text-shadow: 
+            -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+            0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+            -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+    50% {
+        text-shadow: 
+            0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+            0.05em 0 0 rgba(0, 255, 0, 0.75),
+            0 -0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+    99% {
+        text-shadow: 
+            0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+            0.05em 0 0 rgba(0, 255, 0, 0.75),
+            0 -0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+}
+
+/* Eric meter mini */
+.omm-eric-meter-mini {
+    width: 100%;
+    height: 5px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 15px;
+}
+
+.omm-meter-progress {
+    height: 100%;
+    background: linear-gradient(90deg, #ff0000, #ffff00, #00ff00);
+    transition: width 1s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .omm-mushroom-magic,
+    .omm-quantum-thought,
+    .omm-opus-wisdom {
+        padding: 20px;
+    }
+    
+    .omm-vision-text,
+    .omm-thought,
+    .omm-wisdom-text {
+        font-size: 1em;
+    }
+    
+    .omm-opus-avatar {
+        font-size: 1.5em;
+    }
+}
+
+/* Breathing animation for SVG circles */
+.breathing-circle {
+    animation: svg-breathe 4s ease-in-out infinite;
+}
+
+@keyframes svg-breathe {
+    0%, 100% { 
+        r: attr(r);
+        opacity: attr(opacity);
+    }
+    50% { 
+        r: calc(attr(r) * 1.3);
+        opacity: calc(attr(opacity) * 0.6);
+    }
+} 
